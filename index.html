@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Велоремонт</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+   <header id="main-header" class="position-absolute top-0 start-0 w-100">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+         <div class="container">
+            <!-- Логотип -->
+            <a class="navbar-brand fw-bold text-uppercase text-light" href="#">veloremont_od</a>
+
+            <!-- Кнопка для мобилок -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Меню -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+               <ul class="navbar-nav text-uppercase fw-semibold">
+                  <li class="nav-item"><a class="nav-link text-light" href="#services">Послуги</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#about">Про нас</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#reviews">Відгуки</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#contact">Контакти</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <!-- ГЛАВНЫЙ БЛОК -->
+   <div class="hero d-flex align-items-center text-light text-center">
+      <div class="container">
+         <h1 class="display-4 fw-bold text-shadow">Професійний ремонт велосипедів</h1>
+         <p class="lead text-shadow">Пропонуємо якісний та швидкий ремонт вашого велосипеду!
+            Запчастини в наявності та під замовлення.
+            Шиномонтаж та великий спектр послуг по ремонту велосипедів. Швидке обслуговування для Glovo кур'єрів тощо
+         </p>
+         <a href="#services" class="btn btn-primary btn-lg">Наші послуги</a>
+      </div>
+   </div>
+
+   <!-- О НАС -->
+   <section id="about" class="py-5 bg-light text-center">
+      <div class="container">
+         <!-- Заголовок -->
+         <h2 class="fw-bold mb-5 pronsas">Про нас</h2>
+         <!-- Описание перед карточками -->
+         <p class="lead mb-5">
+            Ми – команда професіоналів, які знають все про ремонт велосипедів! Якщо ваш двоколісний друг потребує
+            обслуговування, ми швидко та якісно відновимо його роботу. У нас завжди в наявності запчастини та
+            комплектуючі, а якщо потрібно щось особливе – замовимо для вас.
+            Окрім ремонту велосипедів, ми надаємо ще такі послуги.
+         </p>
+
+         <div class="row">
+            <!-- Первая карточка -->
+            <div class="col-md-4">
+               <div class="about-card">
+                  <div class="about-img">
+                     <img src="/source/img/1.webp" alt="Ремонт велосипедов" class="img-fluid">
+                  </div>
+                  <h3 class="about-title">Ремонт інвалідних візків, ходунків</h3>
+                  <p class="about-text">Пропонуємо якісний та швидкий ремонт інвалідних візків, ходунків будь-якої
+                     складності. Заміна
+                     запчастин, налаштування та багато іншого.</p>
+                  <a href="#services" class="about-link">Детальніше</a>
+               </div>
+            </div>
+
+            <!-- Вторая карточка -->
+            <div class="col-md-4">
+               <div class="about-card">
+                  <div class="about-img">
+                     <img src="/source/img/2.webp" alt="Ремонт карбонових виробів" class="img-fluid">
+                  </div>
+                  <h3 class="about-title">Ремонт карбонових виробів</h3>
+                  <p class="about-text">Виконуємо ремонт карбонових деталей для авто та мото техніки. Відновлення
+                     міцності та зовнішнього вигляду.</p>
+                  <a href="#services" class="about-link">Детальніше</a>
+               </div>
+            </div>
+
+            <!-- Третья карточка -->
+            <div class="col-md-4">
+               <div class="about-card">
+                  <div class="about-img">
+                     <img src="/source/img/3.webp" alt="Шиномонтаж" class="img-fluid">
+                  </div>
+                  <h3 class="about-title">Шиномонтаж</h3>
+                  <p class="about-text">Пропонуємо шиномонтаж для велосипедів. Професійне обладнання
+                     та швидке виконання робіт.</p>
+                  <a href="#services" class="about-link">Детальніше</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Промо-блок -->
+   <section id="repair-promo" class="repair-section">
+      <div class="overlay">
+         <div class="container text-center">
+            <h2 class="promo-title">Треба відремонтувати велосипед?<br>Ми це зробимо!</h2>
+            <a href="#services" class="btn btn-primary btn-lg">Наші послуги</a>
+         </div>
+      </div>
+   </section>
+
+   <!-- Послуги -->
+   <section id="services" class="container py-5">
+      <h2 class="text-center fw-bold mb-5">Наші послуги</h2>
+      <div class="timeline">
+         <div class="timeline-line"></div>
+
+         <div class="service-card left fade-in">
+            <div class="service-content">
+               <img src="service1.jpg" alt="Швидке обслуговування">
+               <h3>Швидке обслуговування</h3>
+               <p>Оперативний ремонт для кур'єрів Glovo, Bolt та ін.</p>
+               <span class="price">від 150 грн</span>
+            </div>
+         </div>
+
+         <div class="service-card right fade-in">
+            <div class="service-content">
+               <img src="service2.jpg" alt="ПОВНЕ ТО">
+               <h3>ПОВНЕ ТО</h3>
+               <p>Комплексна діагностика та налаштування всіх вузлів велосипеда.</p>
+               <span class="price">від 500 грн</span>
+            </div>
+         </div>
+
+         <div class="service-card left fade-in">
+            <div class="service-content">
+               <img src="service3.jpg" alt="Налаштування">
+               <h3>Налаштування</h3>
+               <p>Тонке налаштування перемикачів, гальм та інших механізмів.</p>
+               <span class="price">від 200 грн</span>
+            </div>
+         </div>
+
+         <div class="service-card right fade-in">
+            <div class="service-content">
+               <img src="service4.jpg" alt="Шиномонтаж">
+               <h3>Шиномонтаж</h3>
+               <p>Заміна камер, покришок, герметизація безкамерних систем.</p>
+               <span class="price">від 100 грн</span>
+            </div>
+         </div>
+
+         <div class="service-card left fade-in">
+            <div class="service-content">
+               <img src="service5.jpg" alt="Центровка, спицювання">
+               <h3>Центровка, спицювання</h3>
+               <p>Виправлення "вісімок", натяжка та заміна спиць.</p>
+               <span class="price">від 250 грн</span>
+            </div>
+         </div>
+
+         <div class="service-card right fade-in">
+            <div class="service-content">
+               <img src="service6.jpg" alt="Запчастини у продажу">
+               <h3>Запчастини у продажу</h3>
+               <p>Широкий вибір запчастин та комплектуючих.</p>
+            </div>
+         </div>
+
+         <div class="service-card left fade-in">
+            <div class="service-content">
+               <img src="service7.jpg" alt="Аксесуари">
+               <h3>Аксесуари</h3>
+               <p>Велосипедні фари, дзвоники, багажники та ін.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- ВІДГУКИ -->
+   <section id="reviews" class="py-5 bg-light position-relative">
+      <div class="container">
+         <h2 class="fw-bold mb-5 text-center">Відгуки нашіх клієнтів</h2>
+
+         <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner text-center">
+
+               <!-- Відгук 1 -->
+               <div class="carousel-item active">
+                  <div class="review-card">
+                     <div class="review-header">
+                        <img src="https://sotni.ru/wp-content/uploads/2023/08/ava-2.webp" alt="Клієнт"
+                           class="review-img">
+                        <div>
+                           <h5 class="review-name">Олександр Петров</h5>
+                           <small class="review-date">23 січня 2025</small>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                     </div>
+                     <p class="review-text">
+                        "Швидко та якісно відремонтували мій велосипед. Дуже задоволений сервісом! Майстер був уважний
+                        до деталей, пояснив усі етапи роботи, а також дав кілька корисних порад щодо догляду.
+                        Обов'язково повернусь ще!"
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Відгук 2 -->
+               <div class="carousel-item">
+                  <div class="review-card">
+                     <div class="review-header">
+                        <img src="https://i.pinimg.com/736x/5e/d9/2e/5ed92e5683e335ef703a202173ede93f.jpg" alt="Клієнт"
+                           class="review-img">
+                        <div>
+                           <h5 class="review-name">Марина Коваленко</h5>
+                           <small class="review-date">15 лютого 2025</small>
+                        </div>
+                        <div class="review-stars">★★★★☆</div>
+                     </div>
+                     <p class="review-text">
+                        "Знайшла тут рідкісні запчастини, яких не було ніде. Дякую! Окремо хочу подякувати консультанту,
+                        який допоміг обрати найкращий варіант. Ціни дуже приємні, а якість товару відмінна!"
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Відгук 3 -->
+               <div class="carousel-item">
+                  <div class="review-card">
+                     <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Клієнт" class="review-img">
+                        <div>
+                           <h5 class="review-name">Ігор Василенко</h5>
+                           <small class="review-date">10 березня 2025</small>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                     </div>
+                     <p class="review-text">
+                        "Мій улюблений сервіс! Завжди все на вищому рівні, персонал уважний, а якість послуг перевершує
+                        очікування. Рекомендую всім!"
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Відгук 4 -->
+               <div class="carousel-item">
+                  <div class="review-card">
+                     <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Клієнт" class="review-img">
+                        <div>
+                           <h5 class="review-name">Аліна Гончар</h5>
+                           <small class="review-date">19 березня 2025</small>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                     </div>
+                     <p class="review-text">
+                        "Замовляла тут сервісний огляд мого велосипеда. Все зробили швидко, якісно і за приємною ціною.
+                        Дуже
+                        вдячна!"
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Відгук 5 -->
+               <div class="carousel-item">
+                  <div class="review-card">
+                     <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Клієнт" class="review-img">
+                        <div>
+                           <h5 class="review-name">Максим Лисенко</h5>
+                           <small class="review-date">2 квітня 2025</small>
+                        </div>
+                        <div class="review-stars">★★★★☆</div>
+                     </div>
+                     <p class="review-text">
+                        "Сервіс гарний, але чекав трохи довше ніж я очікував. Проте якість роботи на висоті!"
+                     </p>
+                  </div>
+               </div>
+
+            </div>
+
+            <!-- Стрелки посередине блока -->
+            <button class="carousel-control-prev custom-arrow left-arrow" type="button" data-bs-target="#reviewCarousel"
+               data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next custom-arrow right-arrow" type="button"
+               data-bs-target="#reviewCarousel" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+         </div>
+      </div>
+   </section>
+
+   <!-- КАРТА -->
+   <section id="contact" class="container py-5">
+      <h2 class="text-center fw-bold mb-4">Як нас знайти</h2>
+
+      <!-- Вводный текст -->
+      <p class="text-center intro-text">
+         Знайти нас дуже легко! Ми знаходимося в зручному місці, де можна швидко отримати якісний сервіс.
+         Переконайтесь у цьому самі — ось кілька фото нашої локації та карта для вашої зручності.
+      </p>
+
+      <!-- Коллаж -->
+      <div class="photo-collage">
+         <!-- Большая фото слева -->
+         <div class="collage-item collage-large">
+            <img src="/source/img/loc-3.png" alt="Головне фото" class="collage-img">
+            <span class="photo-caption">Головний фасад</span>
+         </div>
+
+         <!-- Маленькие фото справа -->
+         <div class="collage-grid">
+            <div class="collage-item">
+               <img src="/source/img/loc-2.png" alt="Фасад" class="collage-img">
+               <span class="photo-caption">Вхід</span>
+            </div>
+            <div class="collage-item">
+               <img src="/source/img/loc-1.jpg" alt="Бокова сторона" class="collage-img">
+               <span class="photo-caption">Бокова сторона</span>
+            </div>
+            <div class="collage-item">
+               <img src="/source/img/master.jpg" alt="Майстерня" class="collage-img">
+               <span class="photo-caption">Майстерня</span>
+            </div>
+            <div class="collage-item">
+               <img src="/source/img/kasa.jpg" alt="Каса" class="collage-img">
+               <span class="photo-caption">Каса</span>
+            </div>
+         </div>
+      </div>
+
+      <!-- Заголовок "Карта" -->
+      <h2 class="map-title">Карта</h2>
+
+      <!-- Карта -->
+      <div class="ratio ratio-16x9">
+         <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2313.1958396871323!2d30.70929911281068!3d46.41165386837961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633cbc5e5948d%3A0xb37e52f482290f33!2sVeloremont_od!5e0!3m2!1sru!2sua!4v1743694824811!5m2!1sru!2sua"
+            width="600" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+   </section>
+
+
+   <!-- ФУТЕР -->
+   <footer class="footer">
+      <div class="footer-container">
+         <!-- Блок контактов -->
+         <div class="footer-section contact-info">
+            <h3>📍 Ми знаходимося тут</h3>
+            <p>🖲 <strong>Адреса:</strong> Проспект Небесної Сотні 10/9</p>
+            <p>🕘 <strong>Графік роботи:</strong> Вт-Нд 10:00 - 16:00</p>
+            <p>❌ <strong>Понеділок - вихідний</strong></p>
+         </div>
+
+         <!-- Блок телефона -->
+         <div class="footer-section call-info">
+            <h3>📞 Запис на сервіс</h3>
+            <p><a href="tel:+380930936320" class="tel">+380 93 093 63 20</a></p>
+            <p><a href="tel:+380633129991" class="tel">+380 63 312 99 91</a></p>
+            <a href="tel:+380930936320" class="call-button">Зателефонувати</a>
+         </div>
+
+         <!-- Блок соцсетей -->
+         <div class="footer-section social-media">
+            <h3>🌐 Ми в соцмережах</h3>
+            <div class="social-icons">
+               <a href="#" target="_blank">
+                  <img src="https://img.icons8.com/?size=100&id=eroEfFA9ALuI&format=png&color=000000" class="img-icon"
+                     alt="Facebook">
+               </a>
+               <a href="https://www.instagram.com/veloremont_od" target="_blank">
+                  <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" class="img-icon"
+                     alt="Instagram">
+               </a>
+               <a href="#" target="_blank">
+                  <img src="https://img.icons8.com/?size=100&id=l7PLniR__Vsn&format=png&color=000000" class="img-icon"
+                     alt="Telegram">
+               </a>
+               <a href="#" target="_blank">
+                  <img src="https://img.icons8.com/?size=100&id=108842&format=png&color=000000" class="img-icon"
+                     alt="WhatsApp">
+               </a>
+            </div>
+         </div>
+
+      </div>
+
+      <!-- Подвал с копирайтом -->
+      <div class="footer-bottom">
+         <p>© 2025 Всі права захищені</p>
+      </div>
+   </footer>
+
+   <!-- Подключение Bootstrap JS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+   <script src="/js/script.js"></script>
+</body>
+
+</html>
