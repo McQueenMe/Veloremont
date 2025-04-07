@@ -111,6 +111,11 @@ body {
    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
+.color-sof{
+   color: rgb(255, 255, 255);
+   text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
+
 /* Улучшенный стиль ссылок в хэдере */
 .navbar-nav .nav-link {
    font-size: 1.1rem; /* Увеличенный размер */
@@ -144,13 +149,14 @@ body {
 /* Общие стили для секции "Про нас" */
 #about {
    background: #f8f9fa;
+   padding-bottom: 100px !important;
 }
 /* Карточки */
 .about-card {
    background: white;
    padding: 20px;
    border-radius: 10px;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
    text-align: center;
    transition: transform 0.3s ease-in-out;
    display: flex;
@@ -160,9 +166,6 @@ body {
    height: 100%;
 }
 
-.row{
-   margin-bottom: 100px;
-}
 
 .about-card:hover {
    transform: scale(1.03);
@@ -170,7 +173,7 @@ body {
 }
 
 .pronsas{
-   padding-top: 100px;
+   padding-top: 60px;
    font-size: 3rem;
 }
 
@@ -220,8 +223,8 @@ body {
 
 /* Описание */
 .about-text {
-   font-size: 1rem;
-   color: #666;
+   font-size: 1.2rem;
+   color: #0d0d0d;
    flex-grow: 1; /* Растягивает описание, чтобы карточки были одинаковыми */
    display: flex;
    align-items: center;
@@ -252,113 +255,395 @@ body {
 
 
 /*--------------------------------------------*/
+/* Общий стиль секции */
 
-/* Линия */
-.timeline {
-   position: relative;
-   padding: 20px 0;
+/* Контейнер */
+.services-container {
+   max-width: 1420px;
+   margin: 0 auto;
+   padding: 50px 0;
 }
 
-#services h2{
-   font-size: 3rem;
-}
-
-.timeline-line {
-   position: absolute;
-   left: 50%;
-   top: 0;
-   width: 4px;
-   height: 100%;
-   background: #000000;
-   transform: translateX(-50%);
+/* Заголовки */
+.accessories-title {
+   font-size: 28px;
+   font-weight: bold;
+   color: #237A57;
+   text-align: center;
+   margin-bottom: 30px;
+   border-bottom: 3px solid #E0AFA0;
+   display: inline-block;
+   padding-bottom: 5px;
 }
 
 /* Карточки */
 .service-card {
-   width: 45%;
-   padding: 20px;
    background: white;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   margin-bottom: 30px;
+   border-radius: 12px;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Фото */
+.service-image {
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
    border-radius: 10px;
-   position: relative;
+}
+
+/* Заголовки */
+.service-title {
+   font-size: 20px;
+   font-weight: bold;
+   color: #237A57;
+}
+
+/* Текст */
+.service-text {
+   font-size: 16px;
+   color: #555;
+}
+
+/* Кнопка */
+.service-btn {
+   background: #E0AFA0;
+   color: white;
+   border-radius: 20px;
+   padding: 8px 16px;
+   font-size: 14px;
+   text-decoration: none;
+   transition: all 0.3s;
+}
+
+.service-btn:hover {
+   background: #d18c80;
+}
+
+/* Аксесуари */
+.accessories-container {
+   text-align: center;
+   margin-top: 40px;
+}
+
+.accessories-grid {
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
-   align-items: center;
-   transition: transform 0.3s ease-in-out;
+   gap: 20px;
 }
 
-/* Левосторонние карточки */
-.service-card.left {
-   left: 0;
-   text-align: right;
-   transform: translateX(-100%);
-}
-
-/* Правосторонние карточки */
-.service-card.right {
-   left: 55%;
-   text-align: left;
-   transform: translateX(100%);
-}
-
-/* Контент карточек */
-.service-content {
+.accessory-item {
+   width: 100px;
    text-align: center;
 }
 
-.service-content img {
+.accessory-item img {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px solid #E0AFA0;
+}
+
+.accessory-item p {
+   margin-top: 8px;
+   font-size: 16px;
+   font-weight: bold;
+   color: #333;
+}
+
+
+/*----------------------------------*/
+
+/* Общие стили */
+.feature-section {
+   background: #f8f5f2;
+   padding: 60px 0;
+}
+
+
+/* Карточки слева */
+.feature-card {
+   background: white;
+   padding: 20px;
+   border-radius: 10px;
+   position: relative;
+}
+
+.feature-img {
    width: 100%;
-   max-width: 200px;
-   height: auto;
+   height: 250px;
+   object-fit: cover;
    border-radius: 10px;
 }
 
-.service-content h3 {
-   font-size: 1.5rem;
-   color: #e74c3c;
-   margin: 10px 0;
+.feature-title {
+   font-size: 1.9rem;
+   text-align: start;
+   font-weight: 900;
+   color: #237A57;
+   margin-bottom: 15px;
 }
 
-.service-content p {
-   color: #666;
-   font-size: 1rem;
+.feature-text {
+   font-size: 20px;
+   color: #555;
+   margin-bottom: 15px;
 }
 
-.price {
+.read-more {
+   color: #000000;
+   text-decoration: none;
    font-weight: bold;
-   color: #27ae60;
-   font-size: 1.2rem;
+   background-color: #e9baf7;
+   padding: 10px 20px;
+   border-radius: 20px;
 }
 
-/* Анимация появления */
-.fade-in {
-   opacity: 0;
-   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+/* Блок с иконками теперь в нижнем правом углу */
+.feature-footer {
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 14px;
+   color: #777;
 }
 
-.fade-in.visible {
-   opacity: 1;
-   transform: translateX(0);
+/* Разделительная линия */
+.divider {
+   width: 100%;
+   height: 3px;
+   background: #ddd;
+   margin: 25px 0;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-   .timeline-line {
-      left: 20px;
-   }
-
-   .service-card {
-      width: 90%;
-      left: 0;
-      text-align: left;
-      transform: translateX(-100%);
-   }
-
-   .service-card.right {
-      left: 0;
-   }
+/* Правая колонка (мини-карточки) */
+.mini-cards {
+   background: #E5DED8;
+   padding: 20px;
+   border-radius: 10px;
+   text-align: center;
 }
 
+
+/* Расположение мини-карточек по 2 в ряд */
+.mini-card-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 15px;
+}
+
+.mini-card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 45%;
+}
+
+.mini-card img {
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.mini-card span {
+   font-size: 16px;
+   color: #555;
+   margin-top: 5px;
+}
+
+
+/* Левая колонка */
+.feature-card {
+   background: white;
+   padding: 20px;
+   border-radius: 10px;
+   position: relative;
+
+}
+
+.feature-footer {
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 14px;
+   color: #777;
+}
+
+/* Правая колонка */
+.mini-cards {
+   background: #E5DED8;
+   padding: 20px;
+   border-radius: 10px;
+   text-align: center;
+}
+
+
+.mini-card-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 15px;
+}
+
+.mini-card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 45%;
+}
+
+.mini-card img {
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.mini-card span {
+   font-size: 16px;
+   color: #555;
+   margin-top: 5px;
+}
+
+.feature-section {
+   background-color: #f8f9fa; 
+   /*
+   background-image: url("/source/img/7196609.jpg");
+  */
+}
+
+#contact{
+   background-image: url("/source/img/5594016.jpg");
+}
+
+.container-s{
+   margin: 20px 100px;
+}
+
+.section-title {
+   font-size: 3rem;
+   font-weight: bold;
+   margin-bottom: 80px;
+   color: black;
+   text-align: center;
+   padding-top: 50px;
+}
+
+.feature-card {
+   border-radius: 10px;
+   padding: 15px;
+   position: relative;
+}
+.feature-card {
+   background: rgba(226, 240, 255, 0.8); /* полупрозрачный фон */
+   backdrop-filter: blur(12px);           /* блюр заднего фона */
+   -webkit-backdrop-filter: blur(12px);   /* поддержка для Safari */
+   border-radius: 16px;
+   padding: 20px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+}
+
+.feature-footer {
+   position: absolute;
+   bottom: 10px;
+   right: 15px;
+}
+
+.feature-footer-2{
+   justify-content: end;
+}
+
+.sidebar {
+   background: rgb(251, 243, 240) !important;
+   padding: 20px;
+   border-radius: 10px;
+   
+}
+
+
+.mini-title {
+   text-align: center;
+   font-weight: bold;
+   font-size: 1.7rem;
+   margin-bottom: 30px;
+   margin-top: 30px;
+   color: #c97858;
+   border-bottom: 3px solid #c97858;
+}
+
+.mini-card-list {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 15px;
+}
+
+.mini-card {
+   text-align: center;
+   flex: 1;
+}
+
+.mini-card img {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+/* Заголовки в правом блоке теперь выровнены вправо и подчёркиваются только под текстом */
+.mini-title {
+   text-align: right;
+   font-weight: bold;
+   font-size: 1.7rem;
+   margin-bottom: 30px;
+   margin-top: 30px;
+   color: #c97858;
+   display: inline-block;
+   border-bottom: 3px solid #c97858;
+   padding-bottom: 5px;
+}
+
+/* Увеличение размеров изображений в карточках слева */
+.feature-img {
+   width: 100%;
+   height: 300px; /* Увеличенная высота */
+   object-fit: cover;
+   border-radius: 10px;
+}
+
+/* Перемещение значков под текст */
+.feature-footer {
+   position: static; /* Убираем абсолютное позиционирование */
+   margin-top: 15px; /* Отступ сверху */
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 14px;
+   color: #777;
+}
+
+.col-md-5{
+   width: 50%;
+}
+
+.col-md-7{
+   width: 50%;
+}
+
+.text-ts{
+   padding: 0px 20px 0px 30px;
+}
 
 /*-------------------------------------------------*/
 
@@ -479,6 +764,97 @@ body {
    transform: translateY(-50%);
 }
 
+.bg-light{
+   background-image: url("https://lt2.pigugroup.eu/testimonials/7efbb4a60273d1f24191d124f98abdcd.png");
+}
+.bg-light {
+   background-image: url("https://lt2.pigugroup.eu/testimonials/7efbb4a60273d1f24191d124f98abdcd.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   position: relative;
+   z-index: 1;
+ }
+ 
+ .bg-light::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: rgba(255, 255, 255, 0.2); /* Светлый фильтр, чтобы текст был читабельным */
+   z-index: 0;
+ }
+ 
+ .bg-light .container {
+   position: relative;
+   z-index: 1;
+ }
+
+ .custom-toast {
+   position: fixed;
+   bottom: 30px;
+   left: 30px;
+   min-width: 400px;
+   max-width: 500px;
+   padding: 20px 25px;
+   border-radius: 15px;
+   z-index: 9999;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+   display: none;
+   animation: slideIn 0.4s ease forwards;
+   font-size: 1.1rem;
+   color: #fff;
+ }
+ 
+ .success-toast {
+   background-color: #28a745;
+ }
+ 
+ .error-toast {
+   background-color: #dc3545;
+ }
+ 
+ .custom-toast button {
+   margin-top: 0 auto;
+   padding: 8px 16px;
+   background: #fff;
+   color: #333;
+   font-weight: 600;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+ }
+ 
+ .custom-toast button:hover {
+   background-color: #f1f1f1;
+   transform: scale(1.05);
+ }
+ 
+ 
+ @keyframes slideIn {
+   from {
+     transform: translateX(-150%);
+     opacity: 0;
+   }
+   to {
+     transform: translateX(0);
+     opacity: 1;
+   }
+ }
+
+ @keyframes slideOut {
+   from {
+     transform: translateX(0);
+     opacity: 1;
+   }
+   to {
+     transform: translateX(-150%);
+     opacity: 0;
+   }
+ }
+ 
+ 
+
 .left-arrow {
    left: -70px;
 }
@@ -495,13 +871,21 @@ body {
    padding-bottom: 20px;
 }
 
+.carousel-inner {
+   transition: height 0.3s ease-in-out;
+}
+
+
 /*----------Карта----------*/
 
 /* Вводный текст */
 /* Увеличенный отступ перед заголовком */
 #contact h2 {
-   margin-top: 100px;
    font-size: 3rem;
+}
+
+.row{
+   margin: 0 auto;
 }
 
 /* Увеличенный размер текста под заголовком */
@@ -522,7 +906,26 @@ body {
    text-align: center;
    font-size: 3rem;
    font-weight: bold;
-   margin: 60px 0 30px; /* Отступы сверху и снизу */
+   margin: 0px 0 30px; /* Отступы сверху и снизу */
+}
+
+.map-info {
+   font-size: 18px;
+   color: #444;
+}
+
+.map-info p {
+   margin-bottom: 8px;
+}
+
+.map-info a {
+   color: #007bff;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.map-info a:hover {
+   text-decoration: underline;
 }
 
 

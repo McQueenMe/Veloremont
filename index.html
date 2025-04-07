@@ -8,10 +8,92 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <link rel="stylesheet" href="/css/style.css">
+
+   <style>
+      .sidebar {
+         background: #f8f9fa;
+         padding: 20px;
+         border-radius: 10px;
+      }
+
+      .small-img {
+         width: 50px;
+         height: 50px;
+         object-fit: cover;
+         border-radius: 5px;
+      }
+
+      .map-section-wrapper {
+         background-size: cover;
+         padding: 60px 20px;
+         width: 100%;
+      }
+
+      .contact-section {
+         background: rgba(255, 255, 255, 0.15);
+         backdrop-filter: blur(12px);
+         border-radius: 20px;
+         padding: 40px;
+         color: #000000;
+         max-width: 1300px;
+         margin: auto;
+         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      }
+
+      .form-control,
+      .form-select,
+      textarea {
+         border-radius: 10px;
+         border: none;
+         padding: 10px 15px;
+      }
+
+      .form-control:focus,
+      .form-select:focus,
+      textarea:focus {
+         outline: none;
+         box-shadow: 0 0 10px #007bff;
+      }
+
+      .btn-primary {
+         background-color: #ff5722;
+         border: none;
+         padding: 10px 25px;
+         border-radius: 30px;
+         transition: all 0.3s ease;
+         font-weight: 600;
+      }
+
+      .btn-primary:hover {
+         background-color: #e64a19;
+         transform: scale(1.05);
+      }
+
+      .btn-primary:active {
+         transform: scale(0.95);
+      }
+
+
+      .map {
+         border-radius: 15px;
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .map-title {
+         text-align: center;
+         color: #000000;
+         font-size: 2.5rem;
+         font-weight: 700;
+      }
+
+      a {
+         color: #fff;
+      }
+   </style>
 </head>
 
 <body>
-
+   <!-- HEADER -->
    <header id="main-header" class="position-absolute top-0 start-0 w-100">
       <nav class="navbar navbar-expand-lg navbar-dark">
          <div class="container">
@@ -26,10 +108,10 @@
             <!-- Меню -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                <ul class="navbar-nav text-uppercase fw-semibold">
-                  <li class="nav-item"><a class="nav-link text-light" href="#services">Послуги</a></li>
                   <li class="nav-item"><a class="nav-link text-light" href="#about">Про нас</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#features">Послуги</a></li>
                   <li class="nav-item"><a class="nav-link text-light" href="#reviews">Відгуки</a></li>
-                  <li class="nav-item"><a class="nav-link text-light" href="#contact">Контакти</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="#contact">Місцезнаходження</a></li>
                </ul>
             </div>
          </div>
@@ -40,11 +122,11 @@
    <div class="hero d-flex align-items-center text-light text-center">
       <div class="container">
          <h1 class="display-4 fw-bold text-shadow">Професійний ремонт велосипедів</h1>
-         <p class="lead text-shadow">Пропонуємо якісний та швидкий ремонт вашого велосипеду!
+         <p class="lead text-shadow color-sof">Пропонуємо якісний та швидкий ремонт вашого велосипеду!
             Запчастини в наявності та під замовлення.
             Шиномонтаж та великий спектр послуг по ремонту велосипедів. Швидке обслуговування для Glovo кур'єрів тощо
          </p>
-         <a href="#services" class="btn btn-primary btn-lg">Наші послуги</a>
+         <a href="#features" class="btn btn-primary btn-lg">Наші послуги</a>
       </div>
    </div>
 
@@ -72,7 +154,7 @@
                   <p class="about-text">Пропонуємо якісний та швидкий ремонт інвалідних візків, ходунків будь-якої
                      складності. Заміна
                      запчастин, налаштування та багато іншого.</p>
-                  <a href="#services" class="about-link">Детальніше</a>
+                  <a href="#features" class="about-link">Детальніше</a>
                </div>
             </div>
 
@@ -85,7 +167,7 @@
                   <h3 class="about-title">Ремонт карбонових виробів</h3>
                   <p class="about-text">Виконуємо ремонт карбонових деталей для авто та мото техніки. Відновлення
                      міцності та зовнішнього вигляду.</p>
-                  <a href="#services" class="about-link">Детальніше</a>
+                  <a href="#features" class="about-link">Детальніше</a>
                </div>
             </div>
 
@@ -98,7 +180,7 @@
                   <h3 class="about-title">Шиномонтаж</h3>
                   <p class="about-text">Пропонуємо шиномонтаж для велосипедів. Професійне обладнання
                      та швидке виконання робіт.</p>
-                  <a href="#services" class="about-link">Детальніше</a>
+                  <a href="#features" class="about-link">Детальніше</a>
                </div>
             </div>
          </div>
@@ -110,75 +192,177 @@
       <div class="overlay">
          <div class="container text-center">
             <h2 class="promo-title">Треба відремонтувати велосипед?<br>Ми це зробимо!</h2>
-            <a href="#services" class="btn btn-primary btn-lg">Наші послуги</a>
+            <a href="#features" class="btn btn-primary btn-lg">Наші послуги</a>
          </div>
       </div>
    </section>
 
    <!-- Послуги -->
-   <section id="services" class="container py-5">
-      <h2 class="text-center fw-bold mb-5">Наші послуги</h2>
-      <div class="timeline">
-         <div class="timeline-line"></div>
+   <section id="features" class="feature-section py-5">
+      <div class="container">
+         <h2 class="section-title">Наші послуги</h2>
 
-         <div class="service-card left fade-in">
-            <div class="service-content">
-               <img src="service1.jpg" alt="Швидке обслуговування">
-               <h3>Швидке обслуговування</h3>
-               <p>Оперативний ремонт для кур'єрів Glovo, Bolt та ін.</p>
-               <span class="price">від 150 грн</span>
+         <div class="row">
+            <!-- Левая колонка -->
+            <div class="col-lg-8">
+               <!-- Карточка 1 -->
+               <div class="col-lg-12">
+                  <div class="feature-card d-flex align-items-stretch">
+                     <div class="col-md-5">
+                        <img src="/source/img/fix (1).png" alt="Feature Image 1" class="feature-img img-fluid rounded">
+                     </div>
+                     <div class="col-md-7 d-flex flex-column justify-content-between text-ts">
+                        <div>
+                           <h3 class="feature-title text-success fw-bold">ПОВНЕ ТО</h3>
+                           <p class="feature-text text-secondary">
+                              Комплексна діагностика та налаштування всіх вузлів велосипеда.
+                           </p>
+                           <a href="#" class="btn btn-outline-success rounded-pill px-4 py-2">Замовити</a>
+                        </div>
+                        <div class="feature-footer d-flex align-items-center mt-auto text-muted feature-footer-2">
+                           <span class="me-3">💬 1</span>
+                           <span class="me-3">Share</span>
+                           <a href="#" class="me-2">🔗</a>
+                           <a href="#">📘</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="divider"></div>
+
+               <!-- Карточка 2 -->
+               <div class="col-lg-12">
+                  <div class="feature-card d-flex align-items-stretch">
+                     <div class="col-md-5 order-md-2">
+                        <img src="/source/img/fix (1).jpg" alt="Feature Image 2" class="feature-img img-fluid rounded">
+                     </div>
+                     <div class="col-md-7 d-flex flex-column justify-content-between text-ts">
+                        <div>
+                           <h3 class="feature-title text-success fw-bold">Налаштування</h3>
+                           <p class="feature-text text-secondary">
+                              Тонке налаштування перемикачів, гальм та інших механізмів.
+                           </p>
+                           <a href="#" class="btn btn-outline-success rounded-pill px-4 py-2">Замовити</a>
+                        </div>
+                        <div class="feature-footer d-flex align-items-center mt-auto text-muted">
+                           <span class="me-3">💬 1</span>
+                           <span class="me-3">Share</span>
+                           <a href="#" class="me-2">🔗</a>
+                           <a href="#">📘</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="divider"></div>
+
+               <!-- Карточка 3 -->
+               <div class="col-lg-12">
+                  <div class="feature-card d-flex align-items-stretch">
+                     <div class="col-md-5">
+                        <img src="/source/img/fix (2).png" alt="Feature Image 3" class="feature-img img-fluid rounded">
+                     </div>
+                     <div class="col-md-7 d-flex flex-column justify-content-between text-ts">
+                        <div>
+                           <h3 class="feature-title text-success fw-bold">Шиномонтаж</h3>
+                           <p class="feature-text text-secondary">
+                              Заміна камер, покришок, герметизація безкамерних систем.
+                           </p>
+                           <a href="#" class="btn btn-outline-success rounded-pill px-4 py-2">Замовити</a>
+                        </div>
+                        <div class="feature-footer d-flex align-items-center mt-auto text-muted feature-footer-2">
+                           <span class="me-3">💬 1</span>
+                           <span class="me-3">Share</span>
+                           <a href="#" class="me-2">🔗</a>
+                           <a href="#">📘</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="divider"></div>
+
+               <!-- Карточка 4 -->
+               <div class="col-lg-12">
+                  <div class="feature-card d-flex align-items-stretch">
+                     <div class="col-md-5 order-md-2">
+                        <img src="/source/img/fix (3).png" alt="Feature Image 4" class="feature-img img-fluid rounded">
+                     </div>
+                     <div class="col-md-7 d-flex flex-column justify-content-between text-ts">
+                        <div>
+                           <h3 class="feature-title text-success fw-bold">Центровка, спицювання</h3>
+                           <p class="feature-text text-secondary">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod
+                              tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                           </p>
+                           <a href="#" class="btn btn-outline-success rounded-pill px-4 py-2">Замовити</a>
+                        </div>
+                        <div class="feature-footer d-flex align-items-center mt-auto text-muted">
+                           <span class="me-3">💬 1</span>
+                           <span class="me-3">Share</span>
+                           <a href="#" class="me-2">🔗</a>
+                           <a href="#">📘</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-         </div>
 
-         <div class="service-card right fade-in">
-            <div class="service-content">
-               <img src="service2.jpg" alt="ПОВНЕ ТО">
-               <h3>ПОВНЕ ТО</h3>
-               <p>Комплексна діагностика та налаштування всіх вузлів велосипеда.</p>
-               <span class="price">від 500 грн</span>
-            </div>
-         </div>
+            <!-- Правая колонка -->
+            <div class="col-lg-4 sidebar">
+               <h3 class="mini-title">Запчастини</h3>
+               <div class="mini-card-list">
+                  <div class="mini-card">
+                     <img src="https://images.prom.ua/351172600_w600_h600_351172600.jpg" alt="Mini Card">
+                     <span>Гальма</span>
+                  </div>
+                  <div class="mini-card">
+                     <img
+                        src="https://interbike.com.ua/wa-data/public/shop/products/12/69/6912/images/16518/16518.970.jpg"
+                        alt="Mini Card">
+                     <span>Шатуни</span>
+                  </div>
+               </div>
+               <div class="mini-card-list">
+                  <div class="mini-card">
+                     <img src="https://velik-shop.com.ua/wp-content/uploads/2021/11/diskovye-tormoza1.jpg"
+                        alt="Mini Card">
+                     <span>Гальмівні диски</span>
+                  </div>
+                  <div class="mini-card">
+                     <img
+                        src="https://sportano.ua/img/986c30c27a3d26a3ee16c136f92f4ff5/4/0/4019238556339_20-jpg/kamera-velosipedna-continental-compact-20-auto-405953.jpg"
+                        alt="Mini Card">
+                     <span>Велокамера</span>
+                  </div>
+               </div>
 
-         <div class="service-card left fade-in">
-            <div class="service-content">
-               <img src="service3.jpg" alt="Налаштування">
-               <h3>Налаштування</h3>
-               <p>Тонке налаштування перемикачів, гальм та інших механізмів.</p>
-               <span class="price">від 200 грн</span>
-            </div>
-         </div>
+               <h3 class="mini-title">Аксесуари</h3>
+               <div class="mini-card-list">
+                  <div class="mini-card">
+                     <img
+                        src="https://contents.mediadecathlon.com/p2814132/k$5eecc97b1494b3c2cc18dcd63c6e00dd/nabor-svetodiodnykh-fonarej-dlya-velosipeda-st-920-usb-peredslashzad.jpg?f=452x452"
+                        alt="Mini Card">
+                     <span>Ліхтарь</span>
+                  </div>
+                  <div class="mini-card">
+                     <img src="https://prostoneba.ua/content/images/10/480x480l50nn0/70681448136069.jpeg"
+                        alt="Mini Card">
+                     <span>Мигалка</span>
+                  </div>
+               </div>
+               <div class="mini-card-list">
+                  <div class="mini-card">
+                     <img src="https://content1.rozetka.com.ua/goods/images/big/399053392.jpg" alt="Mini Card">
+                     <span>Гудок</span>
+                  </div>
+                  <div class="mini-card">
+                     <img src="https://images.prom.ua/1440612911_w600_h600_1440612911.jpg" alt="Mini Card">
+                     <span>Тримач для телефону</span>
+                  </div>
+               </div>
 
-         <div class="service-card right fade-in">
-            <div class="service-content">
-               <img src="service4.jpg" alt="Шиномонтаж">
-               <h3>Шиномонтаж</h3>
-               <p>Заміна камер, покришок, герметизація безкамерних систем.</p>
-               <span class="price">від 100 грн</span>
-            </div>
-         </div>
-
-         <div class="service-card left fade-in">
-            <div class="service-content">
-               <img src="service5.jpg" alt="Центровка, спицювання">
-               <h3>Центровка, спицювання</h3>
-               <p>Виправлення "вісімок", натяжка та заміна спиць.</p>
-               <span class="price">від 250 грн</span>
-            </div>
-         </div>
-
-         <div class="service-card right fade-in">
-            <div class="service-content">
-               <img src="service6.jpg" alt="Запчастини у продажу">
-               <h3>Запчастини у продажу</h3>
-               <p>Широкий вибір запчастин та комплектуючих.</p>
-            </div>
-         </div>
-
-         <div class="service-card left fade-in">
-            <div class="service-content">
-               <img src="service7.jpg" alt="Аксесуари">
-               <h3>Аксесуари</h3>
-               <p>Велосипедні фари, дзвоники, багажники та ін.</p>
             </div>
          </div>
       </div>
@@ -301,56 +485,115 @@
    </section>
 
    <!-- КАРТА -->
-   <section id="contact" class="container py-5">
-      <h2 class="text-center fw-bold mb-4">Як нас знайти</h2>
+   <section id="contact" class="py-5">
+      <div class="container">
+         <h2 class="text-center fw-bold mb-4">Як нас знайти</h2>
 
-      <!-- Вводный текст -->
-      <p class="text-center intro-text">
-         Знайти нас дуже легко! Ми знаходимося в зручному місці, де можна швидко отримати якісний сервіс.
-         Переконайтесь у цьому самі — ось кілька фото нашої локації та карта для вашої зручності.
-      </p>
+         <!-- Вводный текст -->
+         <p class="text-center intro-text">
+            Знайти нас дуже легко! Ми знаходимося в зручному місці, де можна
+            швидко отримати якісний сервіс.
+            Переконайтесь у цьому самі — ось кілька фото нашої локації та карта для вашої зручності.
+         </p>
 
-      <!-- Коллаж -->
-      <div class="photo-collage">
-         <!-- Большая фото слева -->
-         <div class="collage-item collage-large">
-            <img src="/source/img/loc-3.png" alt="Головне фото" class="collage-img">
-            <span class="photo-caption">Головний фасад</span>
+         <!-- Коллаж -->
+         <div class="photo-collage">
+            <!-- Большая фото слева -->
+            <div class="collage-item collage-large">
+               <img src="/source/img/loc-3.png" alt="Головне фото" class="collage-img">
+               <span class="photo-caption">Головний фасад</span>
+            </div>
+
+            <!-- Маленькие фото справа -->
+            <div class="collage-grid">
+               <div class="collage-item">
+                  <img src="/source/img/loc-2.png" alt="Фасад" class="collage-img">
+                  <span class="photo-caption">Вхід</span>
+               </div>
+               <div class="collage-item">
+                  <img src="/source/img/loc-1.jpg" alt="Бокова сторона" class="collage-img">
+                  <span class="photo-caption">Бокова сторона</span>
+               </div>
+               <div class="collage-item">
+                  <img src="/source/img/master.jpg" alt="Майстерня" class="collage-img">
+                  <span class="photo-caption">Майстерня</span>
+               </div>
+               <div class="collage-item">
+                  <img src="/source/img/kasa.jpg" alt="Каса" class="collage-img">
+                  <span class="photo-caption">Каса</span>
+               </div>
+            </div>
          </div>
 
-         <!-- Маленькие фото справа -->
-         <div class="collage-grid">
-            <div class="collage-item">
-               <img src="/source/img/loc-2.png" alt="Фасад" class="collage-img">
-               <span class="photo-caption">Вхід</span>
-            </div>
-            <div class="collage-item">
-               <img src="/source/img/loc-1.jpg" alt="Бокова сторона" class="collage-img">
-               <span class="photo-caption">Бокова сторона</span>
-            </div>
-            <div class="collage-item">
-               <img src="/source/img/master.jpg" alt="Майстерня" class="collage-img">
-               <span class="photo-caption">Майстерня</span>
-            </div>
-            <div class="collage-item">
-               <img src="/source/img/kasa.jpg" alt="Каса" class="collage-img">
-               <span class="photo-caption">Каса</span>
-            </div>
-         </div>
       </div>
+      <div class="map-section-wrapper">
+         <h2 class="map-title">Контакти</h2>
 
-      <!-- Заголовок "Карта" -->
-      <h2 class="map-title">Карта</h2>
+         <div class="row contact-section">
+            <!-- Левая колонка: форма -->
+            <div class="col-md-6 mb-4">
+               <h3 class="mb-4">Зв'язатися з нами</h3>
+               <form id="contactForm" onsubmit="return false" novalidate>
+                  <div class="mb-3">
+                     <label for="name" class="form-label">Ім'я</label>
+                     <input type="text" class="form-control" id="name" name="name" required>
+                     <div class="invalid-feedback">Введіть ім'я.</div>
+                  </div>
+                  <div class="mb-3">
+                     <label for="phone" class="form-label">Номер телефону</label>
+                     <input type="tel" class="form-control" id="phone" name="phone" pattern="^\+?\d{10,15}$" required>
+                     <div class="invalid-feedback">Введіть коректний номер телефону (10-15 цифр).</div>
+                  </div>
+                  <div class="mb-3">
+                     <label for="service" class="form-label">Оберіть послугу</label>
+                     <select class="form-select" id="service" name="service" required>
+                        <option value="" disabled selected>Виберіть...</option>
+                        <option value="remont">Ремонт велосипедів</option>
+                        <option value="shin">Шиномонтаж</option>
+                        <option value="diagnostika">Діагностика</option>
+                     </select>
+                     <div class="invalid-feedback">Будь ласка, оберіть послугу.</div>
+                  </div>
+                  <div class="mb-3">
+                     <label for="email" class="form-label">Електронна пошта</label>
+                     <input type="email" class="form-control" id="email" name="email">
+                     <div class="invalid-feedback">Введіть коректну електронну адресу.</div>
+                  </div>
+                  <div class="mb-3">
+                     <label for="comment" class="form-label">Коментар</label>
+                     <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Надіслати</button>
+               </form>
+            </div>
 
-      <!-- Карта -->
-      <div class="ratio ratio-16x9">
-         <iframe class="map"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2313.1958396871323!2d30.70929911281068!3d46.41165386837961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633cbc5e5948d%3A0xb37e52f482290f33!2sVeloremont_od!5e0!3m2!1sru!2sua!4v1743694824811!5m2!1sru!2sua"
-            width="600" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Правая колонка: описание, контакты, карта -->
+            <div class="col-md-6">
+               <p class="lead mb-3">
+                  Ми знаходимось у зручному місці, де ви завжди можете отримати якісний ремонт велосипедів, шиномонтаж
+                  та інші
+                  послуги. Чекаємо на вас!
+               </p>
+
+               <div class="map-info mb-4">
+                  <p><strong>📍 Адреса:</strong> Проспект Небесної Сотні 10/9</p>
+                  <p><strong>🕒 Графік роботи:</strong> 10:00 - 16:00 (Понеділок - вихідний)</p>
+                  <p><strong>📞 Запис на сервіс:</strong><br>
+                     <a href="tel:+380930936320">093 093 6320</a> |
+                     <a href="tel:+380633129991">063 312 9991</a>
+                  </p>
+               </div>
+
+               <div class="ratio ratio-16x9">
+                  <iframe class="map"
+                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2313.1958396871323!2d30.70929911281068!3d46.41165386837961!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633cbc5e5948d%3A0xb37e52f482290f33!2sVeloremont_od!5e0!3m2!1sru!2sua!4v1743694824811!5m2!1sru!2sua"
+                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+            </div>
+         </div>
       </div>
    </section>
-
 
    <!-- ФУТЕР -->
    <footer class="footer">
@@ -406,6 +649,29 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
    <script src="/js/script.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+   <script type="text/javascript">
+      (function () {
+         emailjs.init("tuh0pNt6sITQAOMph"); // заменим ниже
+      })();
+   </script>
+
+   <!-- Успіх -->
+   <div id="successToast" class="custom-toast bg-success text-white">
+      <div class="d-flex justify-content-between align-items-center">
+         <span>✅ Повідомлення надіслано успішно!</span>
+         <button class="btn btn-sm btn-light ms-3" onclick="closeToast('successToast')">OK</button>
+      </div>
+   </div>
+
+   <!-- Помилка -->
+   <div id="errorToast" class="custom-toast bg-danger text-white">
+      <div class="d-flex justify-content-between align-items-center">
+         <span>❌ Сталася помилка. Спробуйте ще раз.</span>
+         <button class="btn btn-sm btn-light ms-3" onclick="closeToast('errorToast')">OK</button>
+      </div>
+   </div>
+
 </body>
 
 </html>
