@@ -205,6 +205,14 @@
          --bs-table-striped-bg: unset;
          margin-bottom: unset;
       }
+
+      .mine {
+         color: black;
+         background-color: #e5d73e;
+         padding: 5px 7px;
+         border-radius: 50px;
+         text-decoration: unset;
+      }
    </style>
 
    </style>
@@ -689,6 +697,42 @@
       </div>
    </div>
 
+   <!-- Modal -->
+   <div class="modal fade" id="fullTOModal" tabindex="-1" aria-labelledby="fullTOModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="fullTOModalLabel">Повне ТО — деталі</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body text-start">
+               <p>Прийом на обслуговування в зручний для вас час та у зручному для вас місці.</p>
+               <ul>
+                  <li>Мийка та детейлінг</li>
+                  <li>Перебірка та чистка втулок, каретки (за потреби) та кермової</li>
+                  <li>Чистка та змащення системи перемикання швидкостей і гальмівної системи</li>
+                  <li>Виправлення вісімок та інших нерівностей коліс</li>
+                  <li>Процедури по догляду за амортизаторами</li>
+                  <li>Підкачка амортизаторів</li>
+                  <li>Підкачка коліс</li>
+                  <li>Чистка та змащення ланцюга. Чистка зірок</li>
+                  <li>Налаштування гальм</li>
+                  <li>Налаштування перемикачів</li>
+                  <li>Заміна комплектуючих</li>
+                  <li>Видалення дрібної іржі</li>
+                  <li>Детейлінг</li>
+                  <li>Установка навісного обладнання</li>
+                  <li>Доставка у зручний для клієнта час та у зручне місце</li>
+               </ul>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
    <!-- Подключение Bootstrap JS -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
@@ -704,7 +748,11 @@
    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
    <script>
       const services = [
-         { name: "Повне ТО", price: 1200, description: "Комплексне обслуговування велосипеда." },
+         {
+            name: "Повне ТО",
+            price: 1200,
+            description: `Комплексне обслуговування велосипеда. <a href="#" class="mine" data-bs-toggle="modal" data-bs-target="#fullTOModal">Детальніше</a>`
+         },
          { name: "Sram Butter (доп до ТО)", price: 250, description: "Змащування вилки для кращої роботи." },
          { name: "Мийка повна", price: 600, description: "Глибоке очищення з використанням шампунів." },
          { name: "Переборка еластомерної вилки", price: 800, description: "Сервіс вилки для комфортної їзди." },
