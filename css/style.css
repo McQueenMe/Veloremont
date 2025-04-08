@@ -517,7 +517,7 @@ body {
 }
 
 .feature-section {
-   background-color: #f8f9fa; 
+   background-color: #ffffff; 
    /*
    background-image: url("/source/img/7196609.jpg");
   */
@@ -551,7 +551,6 @@ body {
    -webkit-backdrop-filter: blur(12px);   /* поддержка для Safari */
    border-radius: 16px;
    padding: 20px;
-   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
    overflow: hidden;
 }
 
