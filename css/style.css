@@ -763,6 +763,39 @@ body {
    transform: translateY(-50%);
 }
 
+.bg-light-1{
+   background-image: url("https://images.pexels.com/photos/9651658/pexels-photo-9651658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+.services-section {
+   background: rgb(216,209,221);
+   background: linear-gradient(90deg, rgba(216,209,221,1) 0%, rgba(114,172,194,1) 50%, rgba(88,111,222,1) 100%);
+   background-size: 100% auto;        /* ширина по блоку, высота авто */
+   background-repeat: no-repeat;      /* не повторять */
+   background-position: top center;   /* прикрепить вверх и центрировать */
+   background-attachment: scroll;     /* фон двигается вместе со страницей */
+   position: relative;
+   z-index: 1;
+ }
+ 
+ @media (min-height: 1200px) {
+   .services-section {
+     background-size: 100% 100%; /* если экран очень высокий — растягиваем */
+   }
+ }
+ 
+ .services-section::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background-color: rgba(255, 255, 255, 0.85); /* светлый фильтр */
+   z-index: -1;
+ }
+
+.name{
+   text-align: left;
+}
+
 .bg-light{
    background-image: url("https://lt2.pigugroup.eu/testimonials/7efbb4a60273d1f24191d124f98abdcd.png");
 }

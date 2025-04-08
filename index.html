@@ -89,6 +89,124 @@
       a {
          color: #fff;
       }
+
+      .table-container {
+         background: linear-gradient(90deg, #4e73df, #1cc88a);
+         padding: 20px;
+         border-radius: 15px;
+         color: white;
+         margin-bottom: 30px;
+      }
+
+      .dataTables_wrapper .dataTables_filter input,
+      .dataTables_wrapper .dataTables_length select {
+         border-radius: 20px !important;
+         border: none;
+         padding: 6px 12px;
+      }
+
+      table.dataTable thead {
+         background-color: #ffffff;
+         color: #4e73df;
+      }
+
+      .table-responsive {
+         background-color: white;
+         border-radius: 10px;
+      }
+
+      .order-btn {
+         background-color: #1cc88a;
+         border: none;
+         padding: 6px 14px;
+         color: white;
+         border-radius: 20px;
+         transition: 0.3s ease;
+      }
+
+      .order-btn:hover {
+         background-color: #17a673;
+      }
+
+      /* Делает таблицу фиксированной, чтобы не прыгала при сортировке */
+      .fixed-table {
+         table-layout: fixed;
+         width: 100%;
+      }
+
+      /* Стилизация выпадающего списка */
+      .rows-select {
+         min-width: 80px;
+         padding-right: 1.75rem;
+         /* Отступ от стрелки */
+      }
+
+      /* Задает минимальную высоту секции */
+      .services-section {
+         min-height: 900px;
+         /* Подобрано под 20 строк */
+      }
+
+      /* Убираем дергания при сортировке */
+      #servicesTable th,
+      #servicesTable td {
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+      }
+
+      /* Увеличенная и стильная шапка таблицы */
+      #servicesTable thead th {
+         font-size: 1.1rem;
+         background-color: #343a40 !important;
+         color: white;
+         vertical-align: middle;
+         border-right: 1px solid #555;
+         padding: 16px 12px;
+      }
+
+      /* Вертикальные линии между колонками */
+      #servicesTable td,
+      #servicesTable th {
+         border-right: 1px solid #ddd;
+      }
+
+      #servicesTable th:last-child,
+      #servicesTable td:last-child {
+         border-right: none;
+      }
+
+      /* Зебра-эффект: каждую вторую строку — серой */
+      #servicesTable tbody tr:nth-child(even) {
+         background-color: #f2f2f2 !important;
+      }
+
+      /* Плавное наведение */
+      #servicesTable tbody tr:hover {
+         background-color: #e9ecef;
+         transition: 0.2s ease-in-out;
+      }
+
+      /* Тень и скругление обёртки */
+      .table-responsive {
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+         margin-bottom: 30px;
+      }
+
+      /* Увеличим отступы внутри ячеек */
+      #servicesTable td {
+         padding: 14px 12px;
+      }
+
+      #servicesTable {
+         --bs-table-bg: unset;
+         --bs-table-striped-bg: unset;
+         margin-bottom: unset;
+      }
+   </style>
+
    </style>
 </head>
 
@@ -198,175 +316,48 @@
    </section>
 
    <!-- Послуги -->
-   <section id="features" class="feature-section py-5">
+   <section id="features" class="py-5 services-section bg-light-1">
       <div class="container">
-         <h2 class="section-title">Наші послуги</h2>
-
-         <div class="row">
-            <!-- Левая колонка -->
-            <div class="col-lg-8">
-               <!-- Карточка 1 -->
-               <div class="col-lg-12">
-                  <div class="feature-card d-flex align-items-stretch">
-                     <div class="col-md-5">
-                        <img src="/source/img/fix (2).png" alt="Feature Image 1" class="feature-img img-fluid rounded">
-                     </div>
-                     <div class="col-md-7 d-flex flex-column justify-content-between text-ts">
-                        <div>
-                           <h3 class="feature-title text-success fw-bold">Повне ТО</h3>
-                           <p class="feature-text text-secondary">
-                              Комплексна діагностика та налаштування всіх вузлів велосипеда.
-                           </p>
-                           <a href="#contacts" class="btn btn-outline-success rounded-pill px-4 py-2">Замовити</a>
-                        </div>
-                        <div class="feature-footer d-flex align-items-center mt-auto text-muted feature-footer-2">
-                           <span class="me-3">💬 1</span>
-                           <span class="me-3">Share</span>
-                           <a href="#" class="me-2">🔗</a>
-                           <a href="#">📘</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="divider"></div>
-
-               <!-- Карточка 2 -->
-               <div class="col-lg-12">
-                  <div class="feature-card d-flex align-items-stretch">
-                     <div class="col-md-5 order-md-2">
-                        <img src="/source/img/fix (3).jpg" alt=" Feature Image 2" class="feature-img img-fluid rounded">
-                     </div>
-                     <div class="col-md-7 d-flex flex-column justify-content-between text-ts">
-                        <div>
-                           <h3 class="feature-title text-success fw-bold">Налаштування</h3>
-                           <p class="feature-text text-secondary">
-                              Тонке налаштування перемикачів, гальм та інших механізмів.
-                           </p>
-                           <a href="#contacts" class="btn btn-outline-success rounded-pill px-4 py-2">Замовити</a>
-                        </div>
-                        <div class="feature-footer d-flex align-items-center mt-auto text-muted">
-                           <span class="me-3">💬 1</span>
-                           <span class="me-3">Share</span>
-                           <a href="#" class="me-2">🔗</a>
-                           <a href="#">📘</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="divider"></div>
-
-               <!-- Карточка 3 -->
-               <div class="col-lg-12">
-                  <div class="feature-card d-flex align-items-stretch">
-                     <div class="col-md-5">
-                        <img src="/source/img/fix (1).png" alt="Feature Image 3" class="feature-img img-fluid rounded">
-                     </div>
-                     <div class="col-md-7 d-flex flex-column justify-content-between text-ts">
-                        <div>
-                           <h3 class="feature-title text-success fw-bold">Шиномонтаж</h3>
-                           <p class="feature-text text-secondary">
-                              Заміна камер, покришок, герметизація безкамерних систем.
-                           </p>
-                           <a href="#contacts" class="btn btn-outline-success rounded-pill px-4 py-2">Замовити</a>
-                        </div>
-                        <div class="feature-footer d-flex align-items-center mt-auto text-muted feature-footer-2">
-                           <span class="me-3">💬 1</span>
-                           <span class="me-3">Share</span>
-                           <a href="#" class="me-2">🔗</a>
-                           <a href="#">📘</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="divider"></div>
-
-               <!-- Карточка 4 -->
-               <div class="col-lg-12">
-                  <div class="feature-card d-flex align-items-stretch">
-                     <div class="col-md-5 order-md-2">
-                        <img src="/source/img/back-2.jpeg" alt="Feature Image 4" class="feature-img img-fluid rounded">
-                     </div>
-                     <div class="col-md-7 d-flex flex-column justify-content-between text-ts">
-                        <div>
-                           <h3 class="feature-title text-success fw-bold">Центровка, спицювання</h3>
-                           <p class="feature-text text-secondary">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod
-
-                           </p>
-                           <a href="#contacts" class="btn btn-outline-success rounded-pill px-4 py-2">Замовити</a>
-                        </div>
-                        <div class="feature-footer d-flex align-items-center mt-auto text-muted">
-                           <span class="me-3">💬 1</span>
-                           <span class="me-3">Share</span>
-                           <a href="#" class="me-2">🔗</a>
-                           <a href="#">📘</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+         <h2 class="section-title mb-5 pt-1">Наші послуги</h2>
+         <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+            <div class="d-flex gap-2 align-items-center">
+               <label for="rowsPerPage" class="form-label m-0">Показати:</label>
+               <select id="rowsPerPage" class="form-select form-select-sm rows-select">
+                  <option value="5">5</option>
+                  <option value="10" selected>10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+               </select>
             </div>
+            <input type="text" id="searchInput" class="form-control w-50" placeholder="Пошук послуги...">
+         </div>
 
-            <!-- Правая колонка -->
-            <div class="col-lg-4 sidebar">
-               <h3 class="mini-title">Запчастини</h3>
-               <div class="mini-card-list">
-                  <div class="mini-card">
-                     <img src="https://images.prom.ua/351172600_w600_h600_351172600.jpg" alt="Mini Card">
-                     <span>Гальма</span>
-                  </div>
-                  <div class="mini-card">
-                     <img
-                        src="https://interbike.com.ua/wa-data/public/shop/products/12/69/6912/images/16518/16518.970.jpg"
-                        alt="Mini Card">
-                     <span>Шатуни</span>
-                  </div>
-               </div>
-               <div class="mini-card-list">
-                  <div class="mini-card">
-                     <img src="https://velik-shop.com.ua/wp-content/uploads/2021/11/diskovye-tormoza1.jpg"
-                        alt="Mini Card">
-                     <span>Гальмівні диски</span>
-                  </div>
-                  <div class="mini-card">
-                     <img
-                        src="https://sportano.ua/img/986c30c27a3d26a3ee16c136f92f4ff5/4/0/4019238556339_20-jpg/kamera-velosipedna-continental-compact-20-auto-405953.jpg"
-                        alt="Mini Card">
-                     <span>Велокамера</span>
-                  </div>
-               </div>
+         <div class="table-responsive rounded shadow">
+            <table class="table table-hover align-middle text-center fixed-table custom-table" id="servicesTable">
+               <thead class="table-dark">
+                  <tr>
+                     <th scope="col" style="width: 5%;">#</th>
+                     <th scope="col" class="sortable" data-sort="name" style="width: 25%;">Назва <span
+                           class="sort-indicator">↕</span></th>
+                     <th scope="col" class="sortable" data-sort="price" style="width: 15%;">Ціна <span
+                           class="sort-indicator">↕</span></th>
+                     <th scope="col" style="width: 40%;">Опис</th>
+                     <th scope="col" style="width: 15%;">Дія</th>
+                  </tr>
+               </thead>
+               <tbody id="servicesBody"></tbody>
+            </table>
+         </div>
 
-               <h3 class="mini-title">Аксесуари</h3>
-               <div class="mini-card-list">
-                  <div class="mini-card">
-                     <img
-                        src="https://contents.mediadecathlon.com/p2814132/k$5eecc97b1494b3c2cc18dcd63c6e00dd/nabor-svetodiodnykh-fonarej-dlya-velosipeda-st-920-usb-peredslashzad.jpg?f=452x452"
-                        alt="Mini Card">
-                     <span>Ліхтарь</span>
-                  </div>
-                  <div class="mini-card">
-                     <img src="https://prostoneba.ua/content/images/10/480x480l50nn0/70681448136069.jpeg"
-                        alt="Mini Card">
-                     <span>Мигалка</span>
-                  </div>
-               </div>
-               <div class="mini-card-list">
-                  <div class="mini-card">
-                     <img src="https://content1.rozetka.com.ua/goods/images/big/399053392.jpg" alt="Mini Card">
-                     <span>Гудок</span>
-                  </div>
-                  <div class="mini-card">
-                     <img src="https://images.prom.ua/1440612911_w600_h600_1440612911.jpg" alt="Mini Card">
-                     <span>Тримач для телефону</span>
-                  </div>
-               </div>
-
-            </div>
+         <div class="d-flex justify-content-center align-items-center mt-3 gap-2">
+            <button class="btn btn-outline-secondary" id="prevPage">«</button>
+            <span id="pageInfo" class="fw-bold"></span>
+            <button class="btn btn-outline-secondary" id="nextPage">»</button>
          </div>
       </div>
    </section>
+
+
 
    <!-- ВІДГУКИ -->
    <section id="reviews" class="py-5 bg-light position-relative">
@@ -547,11 +538,48 @@
                   <div class="mb-3">
                      <label for="service" class="form-label">Оберіть послугу</label>
                      <select class="form-select" id="service" name="service" required>
-                        <option value="" disabled selected>Виберіть...</option>
-                        <option value="remont">Ремонт велосипедів</option>
-                        <option value="shin">Шиномонтаж</option>
-                        <option value="diagnostika">Діагностика</option>
+                        <option value="" disabled selected>Виберіть послугу</option>
+                        <option value="Повне ТО">Повне ТО</option>
+                        <option value="Sram Butter (доп до ТО)">Sram Butter (доп до ТО)</option>
+                        <option value="Мийка повна">Мийка повна</option>
+                        <option value="Переборка еластомерної вилки">Переборка еластомерної вилки</option>
+                        <option value="Заклейка камери">Заклейка камери</option>
+                        <option value="Переборка втулки">Переборка втулки</option>
+                        <option value="Переборка каретки з установкою">Переборка каретки з установкою</option>
+                        <option value="Демонтаж шатунів">Демонтаж шатунів</option>
+                        <option value="Заміна покришки/камери">Заміна покришки/камери</option>
+                        <option value="Центровка колеса">Центровка колеса</option>
+                        <option value="Налаштування гальма">Налаштування гальма</option>
+                        <option value="Заміна ротора">Заміна ротора</option>
+                        <option value="Налаштування перекидки">Налаштування перекидки</option>
+                        <option value="Заміна тріщотки/касети">Заміна тріщотки/касети</option>
+                        <option value="Заміна FreeWheel">Заміна FreeWheel</option>
+                        <option value="Заміна підшипників на втулках">Заміна підшипників на втулках</option>
+                        <option value="Установка крил">Установка крил</option>
+                        <option value="Монтаж/демонтаж ланцюга">Монтаж/демонтаж ланцюга</option>
+                        <option value="Монтаж/демонтаж педалей">Монтаж/демонтаж педалей</option>
+                        <option value="Заміна рубашки">Заміна рубашки</option>
+                        <option value="Заміна тросика">Заміна тросика</option>
+                        <option value="Заміна сідла">Заміна сідла</option>
+                        <option value="Заміна руля">Заміна руля</option>
+                        <option value="Заміна виносу руля">Заміна виносу руля</option>
+                        <option value="Заміна манетки">Заміна манетки</option>
+                        <option value="Заміна грипс">Заміна грипс</option>
+                        <option value="Заміна обмотки">Заміна обмотки</option>
+                        <option value="Прокачка гідравліки">Прокачка гідравліки</option>
+                        <option value="ТО гідравліки">ТО гідравліки</option>
+                        <option value="Проведення гідролінії в раму">Проведення гідролінії в раму</option>
+                        <option value="Чистка трансмісії (УЗ ванна)">Чистка трансмісії (УЗ ванна)</option>
+                        <option value="Змазка ланцюга">Змазка ланцюга</option>
+                        <option value="Вирівнювання петуха">Вирівнювання петуха</option>
+                        <option value="Запресовка рулевої">Запресовка рулевої</option>
+                        <option value="Переспицовка">Переспицовка</option>
+                        <option value="Демонтаж старих спиць">Демонтаж старих спиць</option>
+                        <option value="Заміна колодок">Заміна колодок</option>
+                        <option value="Переборка контактних педалей">Переборка контактних педалей</option>
+                        <option value="Інше">Інше</option>
                      </select>
+
                      <div class="invalid-feedback">Будь ласка, оберіть послугу.</div>
                   </div>
                   <div class="mb-3">
@@ -645,17 +673,6 @@
       </div>
    </footer>
 
-   <!-- Подключение Bootstrap JS -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-   <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
-   <script src="/js/script.js"></script>
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-   <script type="text/javascript">
-      (function () {
-         emailjs.init("tuh0pNt6sITQAOMph"); // заменим ниже
-      })();
-   </script>
-
    <!-- Успіх -->
    <div id="successToast" class="custom-toast bg-success text-white">
       <div class="d-flex justify-content-between align-items-center">
@@ -672,6 +689,163 @@
       </div>
    </div>
 
+   <!-- Подключение Bootstrap JS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+   <script src="/js/script.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+   <script type="text/javascript">
+      (function () {
+         emailjs.init("tuh0pNt6sITQAOMph");
+      })();
+   </script>
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+   <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+   <script>
+      const services = [
+         { name: "Повне ТО", price: 1200, description: "Комплексне обслуговування велосипеда." },
+         { name: "Sram Butter (доп до ТО)", price: 250, description: "Змащування вилки для кращої роботи." },
+         { name: "Мийка повна", price: 600, description: "Глибоке очищення з використанням шампунів." },
+         { name: "Переборка еластомерної вилки", price: 800, description: "Сервіс вилки для комфортної їзди." },
+         { name: "Заклейка камери", price: '40 / 60 / 100', description: "Латання проколів (ціна від)." },
+         { name: "Переборка втулки", price: 250, description: "Профілактика та мастило підшипників." },
+         { name: "Переборка каретки з установкою", price: 250, description: "Очищення та змащення каретки." },
+         { name: "Демонтаж шатунів", price: 100, description: "Зняття шатунів для обслуговування." },
+         { name: "Заміна покришки камери", price: 100, description: "Швидка заміна камери або покришки." },
+         { name: "Центровка колеса", price: 150, description: "Вирівнювання колеса на станку." },
+         { name: "Налаштування гальма", price: '100/од.', description: "Корекція калипера або V-brake." },
+         { name: "Заміна ротора", price: 100, description: "Заміна або вирівнювання диску." },
+         { name: "Налаштування перекидки", price: 150, description: "Точне перемикання передач." },
+         { name: "Заміна тріщотки/касети", price: 200, description: "Оновлення трансмісії." },
+         { name: "Заміна FreeWheel", price: 250, description: "Сервіс задньої втулки." },
+         { name: "Підшипники у втулці", price: '150/1 колесо', description: "Заміна підшипників (1 колесо)." },
+         { name: "Установка крил", price: '80/пара', description: "Монтаж крил на велосипед." },
+         { name: "Монтаж/демонтаж ланцюга", price: 70, description: "Обслуговування трансмісії." },
+         { name: "Заміна педалей", price: 75, description: "Швидкий монтаж нових педалей." },
+         { name: "Заміна рубашки", price: 'от 100', description: "Оновлення рубашок без вартості." },
+         { name: "Заміна тросика", price: 50, description: "Швидке відновлення тросиків." },
+         { name: "Заміна сідла", price: 'от 50', description: "Комфортна їзда з новим сідлом." },
+         { name: "Заміна руля", price: 250, description: "Заміна або апгрейд керма." },
+         { name: "Заміна виносу руля", price: 200, description: "Адаптація положення керма." },
+         { name: "Заміна манетки", price: 150, description: "Заміна одного перемикача." },
+         { name: "Заміна грипс", price: 50, description: "Комфортні нові грипси." },
+         { name: "Заміна обмотки", price: 200, description: "Оновлення обмотки керма." },
+         { name: "Прокачка гідравліки", price: '350/од.', description: "Відновлення гідравлічних гальм." },
+         { name: "ТО гідравліки", price: 'от 500/од.', description: "Повне ТО системи (від ціни)." },
+         { name: "Проводка гідролінії", price: 'от 350', description: "Інсталяція гідролінії в раму." },
+         { name: "Чистка трансмісії", price: 450, description: "Глибоке очищення у ванні." },
+         { name: "Смазка ланцюга", price: 'от 50', description: "Захист трансмісії (від ціни)." },
+         { name: "Вирівнювання петуха", price: 150, description: "Точність перемикання передач." },
+         { name: "Запресовка рулевої", price: 'от 250 - 800', description: "Монтаж рулевого стакана." },
+         { name: "Переспицовка", price: 450, description: "Повна перебудова колеса." },
+         { name: "Демонтаж старих спиць", price: 150, description: "Підготовка до нових спиць." },
+         { name: "Заміна колодок", price: 'от 100', description: "Нові гальмівні колодки (від ціни)." },
+         { name: "Переборка контактних педалей", price: 'от 450', description: "Обслуговування контактних педалей." },
+         { name: "Інше", price: '450/час', description: "Роботи за домовленістю, ціна за годину." },
+      ];
+
+      let currentPage = 1;
+      let rowsPerPage = 10;
+      let currentSort = { key: '', asc: true };
+
+      function displayServices() {
+         const tbody = document.getElementById('servicesBody');
+         const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+         const start = (currentPage - 1) * rowsPerPage;
+         const filtered = services.filter(s => s.name.toLowerCase().includes(searchQuery));
+
+         if (currentSort.key) {
+            filtered.sort((a, b) => {
+               let valA = a[currentSort.key];
+               let valB = b[currentSort.key];
+
+               // Если сортируем по цене, извлекаем числовое значение
+               if (currentSort.key === 'price') {
+                  const extractNumber = (val) => {
+                     if (typeof val === 'number') return val;
+                     const matches = val.match(/\d+/g); // ищем все числа
+                     return matches ? parseInt(matches[0]) : 0; // берём первое число
+                  };
+                  valA = extractNumber(valA);
+                  valB = extractNumber(valB);
+               } else {
+                  if (typeof valA === 'string') valA = valA.toLowerCase();
+                  if (typeof valB === 'string') valB = valB.toLowerCase();
+               }
+
+               return currentSort.asc ? (valA > valB ? 1 : -1) : (valA < valB ? 1 : -1);
+            });
+         }
+
+
+         const paginated = filtered.slice(start, start + rowsPerPage);
+         tbody.innerHTML = '';
+         paginated.forEach((s, i) => {
+            tbody.innerHTML += `
+            <tr>
+              <td>${start + i + 1}</td>
+              <td class="name">${s.name}</td>
+              <td>${s.price} грн</td>
+              <td>${s.description}</td>
+              <td>
+               <a href="#contacts" class="btn btn-outline-success btn-sm"
+   onclick="selectService('${s.name}')">Замовити</a>
+
+</td>
+
+            </tr>`;
+         });
+         document.getElementById('pageInfo').innerText = `Сторінка ${currentPage} з ${Math.ceil(filtered.length / rowsPerPage)}`;
+      }
+
+      document.getElementById('searchInput').addEventListener('input', () => {
+         currentPage = 1;
+         displayServices();
+      });
+      document.getElementById('rowsPerPage').addEventListener('change', (e) => {
+         rowsPerPage = +e.target.value;
+         currentPage = 1;
+         displayServices();
+      });
+      document.getElementById('prevPage').addEventListener('click', () => {
+         if (currentPage > 1) currentPage--;
+         displayServices();
+      });
+      document.getElementById('nextPage').addEventListener('click', () => {
+         const maxPage = Math.ceil(services.filter(s => s.name.toLowerCase().includes(document.getElementById('searchInput').value.toLowerCase())).length / rowsPerPage);
+         if (currentPage < maxPage) currentPage++;
+         displayServices();
+      });
+      document.querySelectorAll('.sortable').forEach(th => {
+         th.addEventListener('click', () => {
+            const sortKey = th.dataset.sort;
+            currentSort.asc = currentSort.key === sortKey ? !currentSort.asc : true;
+            currentSort.key = sortKey;
+            displayServices();
+         });
+      });
+
+      displayServices();
+      function selectService(serviceName) {
+         const serviceSelect = document.getElementById('service');
+         const options = serviceSelect.options;
+
+         for (let i = 0; i < options.length; i++) {
+            if (options[i].text === serviceName) {
+               serviceSelect.selectedIndex = i;
+               serviceSelect.classList.add('border', 'border-success', 'border-3');
+               serviceSelect.focus();
+               break;
+            }
+         }
+
+         // Убираем подсветку через 3 секунды
+         setTimeout(() => {
+            serviceSelect.classList.remove('border', 'border-success', 'border-3');
+         }, 3000);
+      }
+   </script>
 </body>
 
 </html>
