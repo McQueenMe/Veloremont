@@ -1095,6 +1095,57 @@ body {
       margin-bottom: 20px;
    }
 }
+/* Адаптивність для екранів < 767px */
+@media (max-width: 767px) {
+   .review-card {
+      padding: 25px 20px;
+      margin: 0 10px 30px;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+   }
+
+   .review-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 0px;
+   }
+
+   .review-img {
+      width: 70px;
+      height: 70px;
+      margin-right: 0;
+      margin-bottom: 0px;
+   }
+
+   .review-name {
+      font-size: 18px;
+      margin-bottom: 5px;
+   }
+
+   .review-date {
+      font-size: 14px;
+   }
+
+   .review-stars {
+      font-size: 20px;
+      margin-top: -10px;
+   }
+
+   .review-text {
+      font-size: 16px;
+      line-height: 1.5;
+   }
+
+   #reviews h2 {
+      font-size: 2rem;
+   }
+
+   .carousel-inner {
+      padding: 0 10px;
+   }
+}
+
 
 @media (max-width: 488px) {
    .review-card{
@@ -1277,6 +1328,25 @@ body {
 
    .collage-img {
       max-height: none;
+   }
+
+   .contact-section{
+      padding: 20px !important;
+   }
+
+   .right-col{
+      text-align: center;
+   }
+
+   .col-md-6{
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+   }
+
+   .btn-end{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
    }
 }
 
