@@ -723,6 +723,12 @@ body {
    background-color: #e64a19;
    border-color: #e64a19;
 }
+
+.services-section p.fst-italic {
+   opacity: 0.9;
+   font-size: 1rem;
+}
+
 /*-------------------------------------------------------*/
 
 .review-card {
@@ -860,8 +866,8 @@ body {
  .custom-toast {
    position: fixed;
    bottom: 30px;
-   left: 30px;
-   min-width: 400px;
+   left: 20px;
+   right: 20px;
    max-width: 500px;
    padding: 20px 25px;
    border-radius: 15px;
@@ -1099,7 +1105,6 @@ body {
 @media (max-width: 767px) {
    .review-card {
       padding: 25px 20px;
-      margin: 0 10px 30px;
       box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
       border-radius: 15px;
    }
@@ -1144,6 +1149,15 @@ body {
    .carousel-inner {
       padding: 0 10px;
    }
+
+   /*----------------------*/
+
+   .about-text{
+      font-size: 1rem;
+   }
+   .about-link{
+      margin-top: 0px;
+   }
 }
 
 
@@ -1155,6 +1169,19 @@ body {
    .review-header{
       display: flex;
       flex-direction: column;
+   }
+
+   .lead{
+      font-size: 1rem;
+   }
+   .map-info{
+      font-size: 1rem !important;
+   }
+
+   /*------------------------*/
+
+   .intro-text{
+      font-size: 1.2rem !important;
    }
 }
  
@@ -1489,3 +1516,140 @@ body {
    transform: scale(1.1);
    filter: brightness(1.2);
 }
+
+
+/*--------------------Таблица--------------------------------*/
+
+@media (max-width: 1199.98px) {
+   .cards-container {
+     flex-direction: column;
+     align-items: center;
+   }
+ 
+   .service-cards, .accessory-spares {
+     width: 100%;
+     max-width: 720px;
+   }
+ 
+   .accessory-grid, .spares-grid {
+     grid-template-columns: repeat(2, 1fr);
+   }
+ 
+   .accessory-card img,
+   .spare-part img {
+     height: 180px;
+   }
+ }
+ 
+ @media (max-width: 991.98px) {
+   .accessory-grid, .spares-grid {
+     grid-template-columns: 1fr;
+   }
+ 
+   .accessory-card img,
+   .spare-part img {
+     height: 160px;
+   }
+ 
+   .service-card {
+     flex-direction: column;
+     text-align: center;
+   }
+ 
+   .service-card:nth-child(even) {
+     flex-direction: column;
+   }
+ 
+   .service-card img {
+     width: 100%;
+     max-height: 250px;
+     object-fit: cover;
+   }
+ 
+   .service-card .text {
+     padding: 1rem;
+   }
+ }
+ 
+ @media (max-width: 767.98px) {
+   .cards-container {
+     padding: 1rem;
+   }
+ 
+   .accessory-card h5,
+   .spare-part h5 {
+     font-size: 1.1rem;
+   }
+ 
+   .accessory-card img,
+   .spare-part img {
+     height: 140px;
+   }
+ 
+   .accessory-card,
+   .spare-part {
+     padding: 0.5rem;
+   }
+ 
+   .accessory-title {
+     font-size: 1.4rem;
+     margin-bottom: 1rem;
+   }
+ 
+   .service-card .text p {
+     font-size: 0.9rem;
+   }
+ 
+   .btn-outline-primary {
+     font-size: 0.85rem;
+     padding: 0.4rem 0.8rem;
+   }
+ 
+   .service-card .text i {
+     font-size: 1.2rem;
+   }
+   .service-card .btn-outline-primary {
+      width: 100%;
+      display: block;
+      margin-top: 1rem;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 576px) {
+      .modal-content {
+        font-size: 0.9rem;
+      }
+    
+      .modal-body ul {
+        padding-left: 1.2rem;
+      }
+    
+      .modal-body li {
+        margin-bottom: 0.4rem;
+      }
+    }
+
+    /* Кнопка "Замовити" — 100% ширини на мобільних */
+@media (max-width: 767.98px) {
+   .service-card .btn-outline-primary {
+     width: 100%;
+     display: block;
+     margin-top: 1rem;
+     box-sizing: border-box;
+   }
+ 
+   .modal-content {
+     font-size: 0.9rem;
+   }
+ 
+   .modal-body ul {
+     padding-left: 1.2rem;
+   }
+ 
+   .modal-body li {
+     margin-bottom: 0.4rem;
+   }
+ }
+ 
+ }
+ 
