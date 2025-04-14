@@ -35,13 +35,6 @@ body {
 }
 
 
-/* Часы работы */
-.working-hours {
-   color: white;
-   font-weight: bold;
-   margin-left: 20px;
-}
-
 /* Фоновое изображение для хэдера и главного блока */
 .hero {
    background: url('/source/img/back-3.jpg') no-repeat center center/cover;
@@ -145,6 +138,24 @@ body {
    transform: scaleX(1);
 }
 
+/*------------------------------------------------------------------------*/
+
+@media (max-width: 391px) {
+   .block-cont{
+      margin-top: 50px;
+   }
+   
+}
+
+
+@media (max-width: 376px) {
+   .block-cont{
+      margin-top: 230px;
+   }
+   
+}
+
+/*------------------------------------------------------------------------*/
 
 /* Общие стили для секции "Про нас" */
 #about {
@@ -152,6 +163,15 @@ body {
    padding-bottom: 100px !important;
 }
 /* Карточки */
+/* Контейнер карточек */
+.adaptiv {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+}
+
+/* Карточка */
 .about-card {
    background: white;
    padding: 20px;
@@ -163,8 +183,31 @@ body {
    flex-direction: column;
    align-items: center;
    justify-content: space-between;
+   width: 100%;
    height: 100%;
+   max-width: 400px; 
+   min-width: 280px; 
+   margin-bottom: 10px;
 }
+
+/* На экранах до 991px — 2 карточки в строке */
+@media (max-width: 991px) {
+   .about-card {
+      flex: 1 1 calc(50% - 20px);
+   }
+}
+
+/* На экранах до 768px — по 1 карточке */
+@media (max-width: 768px) {
+   .about-card {
+      flex: 1 1 100%;
+   }
+   .adaptiv{
+      margin: 0 10px 0 10px;
+   }
+}
+
+
 
 
 .about-card:hover {
@@ -244,13 +287,6 @@ body {
 .about-link:hover {
    color: #ff6f61;
    text-decoration: underline;
-}
-
-/* Делаем все карточки одинаковой высоты */
-@media (min-width: 768px) {
-   .about-card {
-      height: 100%;
-   }
 }
 
 
@@ -776,7 +812,7 @@ body {
    background-attachment: scroll;     /* фон двигается вместе со страницей */
    position: relative;
    z-index: 1;
- }
+}
  
  @media (min-height: 1200px) {
    .services-section {
@@ -908,6 +944,170 @@ body {
 }
 
 
+.reviews-bg {
+   background-image: url("https://lt2.pigugroup.eu/testimonials/7efbb4a60273d1f24191d124f98abdcd.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   position: relative;
+   z-index: 1;
+ }
+ 
+ .reviews-bg::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.2); /* затемнення для контрастного тексту */
+   z-index: 0;
+ }
+ 
+ .reviews-bg .container {
+   position: relative;
+   z-index: 1;
+ }
+ 
+ .review-card {
+   max-width: 900px;
+   margin: 0 auto 30px;
+   padding: 40px;
+   background: white;
+   border-radius: 20px;
+   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15), 0px 10px 20px rgba(0, 0, 0, 0.2);
+   transition: transform 0.3s ease-in-out;
+ }
+ 
+ .review-card:hover {
+   transform: scale(1.05);
+ }
+ 
+ .review-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 20px;
+   gap: 15px;
+   flex-wrap: wrap;
+ }
+ 
+ .review-img {
+   width: 90px;
+   height: 90px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 4px solid #FFD700;
+ }
+ 
+ .review-name {
+   font-size: 22px;
+   font-weight: bold;
+ }
+ 
+ .review-date {
+   font-size: 15px;
+   color: #888;
+ }
+ 
+ .review-stars {
+   font-size: 24px;
+   color: #FFD700;
+ }
+ 
+ .review-text {
+   font-size: 18px;
+   color: #333;
+   line-height: 1.8;
+   font-style: italic;
+   margin-top: 20px;
+ }
+ 
+ /* Центровані стрілки */
+/* Базовый стиль стрелок */
+.custom-arrow {
+   width: 60px;
+   height: 60px;
+   background-color: rgba(255, 255, 255, 0.3);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.3s ease;
+   z-index: 2;
+}
+
+
+/* Позиция стрелок для десктопа (≥992px) */
+@media (min-width: 1200px) {
+   .custom-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+   }
+
+   .left-arrow {
+      left: 0px;
+   }
+
+   .right-arrow {
+      right: 0px;
+   }
+}
+
+@media (max-width: 1200px) {
+   .custom-arrow {
+      position: static;
+      transform: none;
+      margin: 10px;
+      width: 50px;
+      height: 50px;
+   }
+
+   .carousel-inner {
+      margin-bottom: 20px;
+   }
+
+   .carousel-mobile-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+   }
+
+   .carousel-mobile-controls .carousel-control-prev,
+   .carousel-mobile-controls .carousel-control-next {
+      position: static !important;
+      display: inline-flex !important;
+   }
+
+   .d-lg-block{
+      display: flex !important;
+      justify-content: center;
+   }
+}
+
+@media (max-width: 1000px) {
+   .carousel-item {
+      padding: 0px 30px;
+   }
+
+   .review-card {
+      margin-bottom: 20px;
+   }
+}
+
+@media (max-width: 488px) {
+   .review-card{
+      display: flex;
+      flex-direction: column;
+   }
+   .review-header{
+      display: flex;
+      flex-direction: column;
+   }
+}
+ 
+
 /*----------Карта----------*/
 
 /* Вводный текст */
@@ -1017,6 +1217,74 @@ body {
    padding: 5px 10px;
    font-size: 16px;
    border-radius: 5px;
+}
+
+
+@media (max-width: 991px) {
+   .photo-collage {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 15px;
+   }
+
+   .collage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      justify-content: center;
+   }
+
+   .collage-item {
+      height: auto;
+   }
+
+   .collage-img {
+      height: auto;
+      max-height: 300px;
+   }
+   .collage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      justify-content: center;
+   }
+   
+   .collage-grid .collage-item {
+      aspect-ratio: 1 / 1; /* Квадратная форма */
+      height: auto;
+   }
+   
+   .collage-grid .collage-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+   }
+   .photo-caption{
+      margin-bottom: 20px;
+   }
+}
+
+@media (max-width: 576px) {
+   .collage-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .collage-grid .collage-item {
+      aspect-ratio: 1 / 1;
+   }
+
+   .collage-img {
+      max-height: none;
+   }
+}
+
+
+@media (max-width:768px) {
+   .photo-caption{
+      margin-bottom: 0px;
+   }
 }
 
 /*----------футер----------------*/
