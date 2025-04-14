@@ -142,7 +142,7 @@ body {
 
 @media (max-width: 391px) {
    .block-cont{
-      margin-top: 50px;
+      margin-top: 60px;
    }
    
 }
@@ -150,7 +150,7 @@ body {
 
 @media (max-width: 376px) {
    .block-cont{
-      margin-top: 230px;
+      margin-top: 240px;
    }
    
 }
@@ -1628,28 +1628,36 @@ body {
         margin-bottom: 0.4rem;
       }
     }
+}
 
-    /* Кнопка "Замовити" — 100% ширини на мобільних */
-@media (max-width: 767.98px) {
-   .service-card .btn-outline-primary {
-     width: 100%;
-     display: block;
-     margin-top: 1rem;
+@media (max-width: 767px) and (min-width: 568px) {
+   .table td:last-child .btn {
+     width: 100% !important;
      box-sizing: border-box;
+     font-size: 10px;
    }
  
-   .modal-content {
-     font-size: 0.9rem;
-   }
- 
-   .modal-body ul {
-     padding-left: 1.2rem;
-   }
- 
-   .modal-body li {
-     margin-bottom: 0.4rem;
+   .table td:last-child {
+     padding: 8px !important;
    }
  }
  
+ 
+ @media (max-width: 568px) {
+   th:nth-child(4),
+   td:nth-child(4), /* опис */
+   th:nth-child(5),
+   td:nth-child(5)  /* дія */
+   {
+     display: none !important;
+   }
+ 
+   #servicesBody tr {
+     cursor: pointer;
+   }
+
+   .services-section p.fst-italic{
+      text-align: center;
+   }
  }
  
