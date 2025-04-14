@@ -693,7 +693,6 @@
       </div>
    </div>
 
-
    <!-- Модальне вікно Повне ТО -->
    <div class="modal fade" id="fullTOModal" tabindex="-1" aria-labelledby="fullTOModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -829,7 +828,7 @@
          tbody.innerHTML = '';
          paginated.forEach((s, i) => {
             tbody.innerHTML += `
-            <tr>
+            <tr class="mobile-row" data-bs-toggle="modal" data-bs-target="#modal1">
               <td>${start + i + 1}</td>
               <td class="name">${s.name}</td>
               <td>${s.price} грн</td>
