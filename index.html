@@ -138,13 +138,11 @@
       .rows-select {
          min-width: 80px;
          padding-right: 1.75rem;
-         /* Отступ от стрелки */
       }
 
-      /* Задает минимальную высоту секции */
+      /* Задаем минимальную высоту секции */
       .services-section {
          min-height: 900px;
-         /* Подобрано под 20 строк */
       }
 
       /* Убираем дергания при сортировке */
@@ -155,7 +153,6 @@
          white-space: nowrap;
       }
 
-      /* Увеличенная и стильная шапка таблицы */
       #servicesTable thead th {
          font-size: 1.1rem;
          background-color: #343a40 !important;
@@ -246,7 +243,7 @@
 
    <!-- ГЛАВНЫЙ БЛОК -->
    <div class="hero d-flex align-items-center text-light text-center">
-      <div class="container">
+      <div class="container block-cont">
          <h1 class="display-4 fw-bold text-shadow">Професійний ремонт велосипедів</h1>
          <p class="lead text-shadow color-sof">Пропонуємо якісний та швидкий ремонт вашого велосипеду!
             Запчастини в наявності та під замовлення.
@@ -269,9 +266,9 @@
             Окрім ремонту велосипедів, ми надаємо ще такі послуги.
          </p>
 
-         <div class="row">
+         <div class="adaptiv">
             <!-- Первая карточка -->
-            <div class="col-md-4">
+            <div class="">
                <div class="about-card">
                   <div class="about-img">
                      <img src="/source/img/1.webp" alt="Ремонт велосипедов" class="img-fluid">
@@ -285,7 +282,7 @@
             </div>
 
             <!-- Вторая карточка -->
-            <div class="col-md-4">
+            <div class="">
                <div class="about-card">
                   <div class="about-img">
                      <img src="/source/img/2.webp" alt="Ремонт карбонових виробів" class="img-fluid">
@@ -298,7 +295,7 @@
             </div>
 
             <!-- Третья карточка -->
-            <div class="col-md-4">
+            <div class="">
                <div class="about-card">
                   <div class="about-img">
                      <img src="/source/img/3.webp" alt="Шиномонтаж" class="img-fluid">
@@ -364,11 +361,8 @@
          </div>
       </div>
    </section>
-
-
-
    <!-- ВІДГУКИ -->
-   <section id="reviews" class="py-5 bg-light position-relative">
+   <section id="reviews" class="py-5 reviews-bg position-relative">
       <div class="container">
          <h2 class="fw-bold mb-5 text-center">Відгуки нашіх клієнтів</h2>
 
@@ -380,7 +374,7 @@
                   <div class="review-card">
                      <div class="review-header">
                         <img src="https://sotni.ru/wp-content/uploads/2023/08/ava-2.webp" alt="Клієнт"
-                           class="review-img">
+                           class="review-img" />
                         <div>
                            <h5 class="review-name">Олександр Петров</h5>
                            <small class="review-date">23 січня 2025</small>
@@ -389,8 +383,7 @@
                      </div>
                      <p class="review-text">
                         "Швидко та якісно відремонтували мій велосипед. Дуже задоволений сервісом! Майстер був уважний
-                        до деталей, пояснив усі етапи роботи, а також дав кілька корисних порад щодо догляду.
-                        Обов'язково повернусь ще!"
+                        до деталей..."
                      </p>
                   </div>
                </div>
@@ -400,7 +393,7 @@
                   <div class="review-card">
                      <div class="review-header">
                         <img src="https://i.pinimg.com/736x/5e/d9/2e/5ed92e5683e335ef703a202173ede93f.jpg" alt="Клієнт"
-                           class="review-img">
+                           class="review-img" />
                         <div>
                            <h5 class="review-name">Марина Коваленко</h5>
                            <small class="review-date">15 лютого 2025</small>
@@ -408,8 +401,8 @@
                         <div class="review-stars">★★★★☆</div>
                      </div>
                      <p class="review-text">
-                        "Знайшла тут рідкісні запчастини, яких не було ніде. Дякую! Окремо хочу подякувати консультанту,
-                        який допоміг обрати найкращий варіант. Ціни дуже приємні, а якість товару відмінна!"
+                        "Знайшла тут рідкісні запчастини, яких не було ніде. Дякую! Консультант допоміг обрати
+                        найкраще!"
                      </p>
                   </div>
                </div>
@@ -418,7 +411,7 @@
                <div class="carousel-item">
                   <div class="review-card">
                      <div class="review-header">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Клієнт" class="review-img">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Клієнт" class="review-img" />
                         <div>
                            <h5 class="review-name">Ігор Василенко</h5>
                            <small class="review-date">10 березня 2025</small>
@@ -427,7 +420,7 @@
                      </div>
                      <p class="review-text">
                         "Мій улюблений сервіс! Завжди все на вищому рівні, персонал уважний, а якість послуг перевершує
-                        очікування. Рекомендую всім!"
+                        очікування."
                      </p>
                   </div>
                </div>
@@ -436,7 +429,7 @@
                <div class="carousel-item">
                   <div class="review-card">
                      <div class="review-header">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Клієнт" class="review-img">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Клієнт" class="review-img" />
                         <div>
                            <h5 class="review-name">Аліна Гончар</h5>
                            <small class="review-date">19 березня 2025</small>
@@ -444,9 +437,7 @@
                         <div class="review-stars">★★★★★</div>
                      </div>
                      <p class="review-text">
-                        "Замовляла тут сервісний огляд мого велосипеда. Все зробили швидко, якісно і за приємною ціною.
-                        Дуже
-                        вдячна!"
+                        "Замовляла сервісний огляд велосипеда. Все швидко, якісно і за приємною ціною. Дуже вдячна!"
                      </p>
                   </div>
                </div>
@@ -455,7 +446,7 @@
                <div class="carousel-item">
                   <div class="review-card">
                      <div class="review-header">
-                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Клієнт" class="review-img">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Клієнт" class="review-img" />
                         <div>
                            <h5 class="review-name">Максим Лисенко</h5>
                            <small class="review-date">2 квітня 2025</small>
@@ -463,25 +454,26 @@
                         <div class="review-stars">★★★★☆</div>
                      </div>
                      <p class="review-text">
-                        "Сервіс гарний, але чекав трохи довше ніж я очікував. Проте якість роботи на висоті!"
+                        "Сервіс гарний, але трохи довше, ніж я очікував. Проте результат – супер!"
                      </p>
                   </div>
                </div>
 
             </div>
-
-            <!-- Стрелки посередине блока -->
-            <button class="carousel-control-prev custom-arrow left-arrow" type="button" data-bs-target="#reviewCarousel"
-               data-bs-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next custom-arrow right-arrow" type="button"
-               data-bs-target="#reviewCarousel" data-bs-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <!-- Стрілки для десктопу -->
+            <div class="d-none d-lg-block">
+               <button class="carousel-control-prev custom-arrow left-arrow" type="button"
+                  data-bs-target="#reviewCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               </button>
+               <button class="carousel-control-next custom-arrow right-arrow" type="button"
+                  data-bs-target="#reviewCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               </button>
+            </div>
          </div>
-      </div>
    </section>
+
 
    <!-- КАРТА -->
    <section id="contact" class="py-5">
@@ -604,7 +596,7 @@
             </div>
 
             <!-- Правая колонка: описание, контакты, карта -->
-            <div class="col-md-6">
+            <div class="col-md-6 right-col">
                <p class="lead mb-3">
                   Ми знаходимось у зручному місці, де ви завжди можете отримати якісний ремонт велосипедів, шиномонтаж
                   та інші
@@ -839,9 +831,7 @@
               <td>
                <a href="#contacts" class="btn btn-outline-success btn-sm"
    onclick="selectService('${s.name}')">Замовити</a>
-
-</td>
-
+            </td>
             </tr>`;
          });
          document.getElementById('pageInfo').innerText = `Сторінка ${currentPage} з ${Math.ceil(filtered.length / rowsPerPage)}`;
